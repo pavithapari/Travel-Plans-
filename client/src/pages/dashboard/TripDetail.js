@@ -27,7 +27,7 @@ import {
   Tooltip,
   LinearProgress,
 } from "@mui/material";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import ArrowBackIcon from "@mui/icons-material/West";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import AddIcon from "@mui/icons-material/Add";
@@ -35,7 +35,7 @@ import FlightIcon from "@mui/icons-material/Flight";
 import HotelIcon from "@mui/icons-material/Hotel";
 import DateRangeIcon from "@mui/icons-material/DateRange";
 import PlaceIcon from "@mui/icons-material/Place";
-import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
+import WalletIcon from "@mui/icons-material/Wallet";
 import {
   getTrip,
   updateTrip,
@@ -336,7 +336,7 @@ const TripDetail = () => {
                   borderColor: "divider",
                 }}
               >
-                <AccountBalanceWalletIcon color="success" />
+                <WalletIcon color="success" />
                 <Typography
                   variant="caption"
                   display="block"
@@ -361,7 +361,7 @@ const TripDetail = () => {
                   borderColor: "divider",
                 }}
               >
-                <AccountBalanceWalletIcon color="warning" />
+                <WalletIcon color="warning" />
                 <Typography
                   variant="caption"
                   display="block"

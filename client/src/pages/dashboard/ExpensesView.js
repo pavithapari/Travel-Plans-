@@ -26,7 +26,7 @@ import {
 import AddIcon from "@mui/icons-material/Add";
 import DeleteIcon from "@mui/icons-material/Delete";
 import DownloadIcon from "@mui/icons-material/Download";
-import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
+import WalletIcon from "@mui/icons-material/Wallet";
 import {
   PieChart,
   Pie,
@@ -250,7 +250,7 @@ const ExpensesView = () => {
               color: "white",
             }}
           >
-            <AccountBalanceWalletIcon sx={{ mb: 1, opacity: 0.8 }} />
+            <WalletIcon sx={{ mb: 1, opacity: 0.8 }} />
             <Typography variant="body2" sx={{ opacity: 0.85 }}>
               Total Spent
             </Typography>
@@ -268,7 +268,7 @@ const ExpensesView = () => {
               bgcolor: budget > 0 ? "success.light" : "grey.100",
             }}
           >
-            <AccountBalanceWalletIcon sx={{ mb: 1, color: "success.main" }} />
+            <WalletIcon sx={{ mb: 1, color: "success.main" }} />
             <Typography variant="body2" color="text.secondary">
               Budget
             </Typography>
@@ -289,7 +289,7 @@ const ExpensesView = () => {
                   : "info.light",
             }}
           >
-            <AccountBalanceWalletIcon
+            <WalletIcon
               sx={{
                 mb: 1,
                 color:
@@ -455,9 +455,7 @@ const ExpensesView = () => {
                   gap: 1,
                 }}
               >
-                <AccountBalanceWalletIcon
-                  sx={{ fontSize: 48, color: "text.disabled" }}
-                />
+                <WalletIcon sx={{ fontSize: 48, color: "text.disabled" }} />
                 <Typography color="text.secondary">
                   No data to display
                 </Typography>

@@ -15,11 +15,11 @@ import {
 } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import ExploreIcon from "@mui/icons-material/Explore";
-import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
-import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import WalletIcon from "@mui/icons-material/Wallet";
+import CheckCircleIcon from "@mui/icons-material/TaskAlt";
 import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
 import DateRangeIcon from "@mui/icons-material/DateRange";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import ArrowForwardIcon from "@mui/icons-material/East";
 import WbSunnyIcon from "@mui/icons-material/WbSunny";
 
 import HotelIcon from "@mui/icons-material/Hotel";
@@ -109,7 +109,7 @@ const DashboardHome = () => {
       bg: "primary.light",
     },
     {
-      icon: <AccountBalanceWalletIcon />,
+      icon: <WalletIcon />,
       label: "Track Expenses",
       path: "/dashboard/expenses",
       color: "success.main",
@@ -165,14 +165,14 @@ const DashboardHome = () => {
           {
             label: "Total Budget",
             value: `₹${totalBudget > 0 ? (totalBudget / 1000).toFixed(0) + "K" : "0"}`,
-            icon: <AccountBalanceWalletIcon />,
+            icon: <WalletIcon />,
             color: "warning",
             bg: "linear-gradient(135deg, #FF9800 0%, #F57C00 100%)",
           },
           {
             label: "Total Spent",
             value: `₹${totalSpent > 0 ? (totalSpent / 1000).toFixed(0) + "K" : "0"}`,
-            icon: <AccountBalanceWalletIcon />,
+            icon: <WalletIcon />,
             color: "info",
             bg: "linear-gradient(135deg, #00BCD4 0%, #0097A7 100%)",
           },

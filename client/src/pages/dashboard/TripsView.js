@@ -23,7 +23,7 @@ import {
 import AddIcon from "@mui/icons-material/Add";
 import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
 import DateRangeIcon from "@mui/icons-material/DateRange";
-import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
+import WalletIcon from "@mui/icons-material/Wallet";
 import { getTrips, addTrip } from "../../redux/actions/tripActions";
 import api from "../../services/api";
 
@@ -364,10 +364,7 @@ const TripsView = () => {
                             gap: 0.5,
                           }}
                         >
-                          <AccountBalanceWalletIcon
-                            fontSize="small"
-                            color="success"
-                          />
+                          <WalletIcon fontSize="small" color="success" />
                           <Typography
                             variant="body2"
                             color="success.main"

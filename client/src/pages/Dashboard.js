@@ -30,7 +30,7 @@ import ExploreIcon from "@mui/icons-material/Explore";
 import LogoutIcon from "@mui/icons-material/Logout";
 import MenuIcon from "@mui/icons-material/Menu";
 import DashboardIcon from "@mui/icons-material/Dashboard";
-import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
+import WalletIcon from "@mui/icons-material/Wallet";
 import WbSunnyIcon from "@mui/icons-material/WbSunny";
 import TranslateIcon from "@mui/icons-material/Translate";
 import HotelIcon from "@mui/icons-material/Hotel";
@@ -73,7 +73,7 @@ const Dashboard = () => {
   const menuItems = [
     { text: "Dashboard", path: "", icon: <DashboardIcon /> },
     { text: "My Trips", path: "trips", icon: <ExploreIcon /> },
-    { text: "Expenses", path: "expenses", icon: <AccountBalanceWalletIcon /> },
+    { text: "Expenses", path: "expenses", icon: <WalletIcon /> },
     { text: "Weather", path: "weather", icon: <WbSunnyIcon /> },
     { text: "Translator", path: "translator", icon: <TranslateIcon /> },
     { text: "Bookings", path: "bookings", icon: <HotelIcon /> },
