@@ -44,6 +44,47 @@ const Login = () => {
     }
   }, [isAuthenticated, navigate]);
 
+  const handleGoogleCallback = (response) => {
+    // Google Sign-In disabled in this commit since googleLogin action
+    // is not present in authActions.js in the current repo.
+    // Keep this handler to avoid runtime errors.
+    console.log("Google callback received", response);
+  };
+
+  useEffect(() => {
+    const initializeGoogleSignIn = () => {
+      if (window.google) {
+        window.google.accounts.id.initialize({
+          client_id: "643113382684-q82ot662op6kq7fnc1brg3ivclq3pmvk.apps.googleusercontent.com",
+          callback: handleGoogleCallback,
+        });
+
+        const googleBtn = document.getElementById("google-signin-btn");
+        if (googleBtn) {
+          window.google.accounts.id.renderButton(googleBtn, {
+            theme: "outline",
+            size: "large",
+            text: "signin_with",
+            width: isMobile ? 280 : 360,
+          });
+        }
+      }
+    };
+
+    initializeGoogleSignIn();
+
+    const script = document.querySelector('script[src="https://accounts.google.com/gsi/client"]');
+    if (script) {
+      script.addEventListener("load", initializeGoogleSignIn);
+    }
+
+    return () => {
+      if (script) {
+        script.removeEventListener("load", initializeGoogleSignIn);
+      }
+    };
+  }, [isMobile, dispatch]);
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -274,44 +315,41 @@ const Login = () => {
               <Box
                 sx={{
                   display: "flex",
-                  justifyContent: "center",
+                  flexDirection: "column",
+                  alignItems: "center",
                   gap: 2,
                   mb: 3,
                 }}
               >
-                <IconButton
-                  sx={{
-                    border: "1px solid",
-                    borderColor: "divider",
-                    borderRadius: 2,
-                    p: 1.5,
-                    color: "#DB4437",
-                  }}
-                >
-                  <GoogleIcon />
-                </IconButton>
-                <IconButton
-                  sx={{
-                    border: "1px solid",
-                    borderColor: "divider",
-                    borderRadius: 2,
-                    p: 1.5,
-                    color: "#4267B2",
-                  }}
-                >
-                  <FacebookIcon />
-                </IconButton>
-                <IconButton
-                  sx={{
-                    border: "1px solid",
-                    borderColor: "divider",
-                    borderRadius: 2,
-                    p: 1.5,
-                    color: "#1DA1F2",
-                  }}
-                >
-                  <TwitterIcon />
-                </IconButton>
+                <div id="google-signin-btn" />
+                <Box sx={{ display: "flex", gap: 2 }}>
+                  <IconButton
+                    disabled
+                    sx={{
+                      border: "1px solid",
+                      borderColor: "divider",
+                      borderRadius: 2,
+                      p: 1.5,
+                      color: "#4267B2",
+                      opacity: 0.5,
+                    }}
+                  >
+                    <FacebookIcon />
+                  </IconButton>
+                  <IconButton
+                    disabled
+                    sx={{
+                      border: "1px solid",
+                      borderColor: "divider",
+                      borderRadius: 2,
+                      p: 1.5,
+                      color: "#1DA1F2",
+                      opacity: 0.5,
+                    }}
+                  >
+                    <TwitterIcon />
+                  </IconButton>
+                </Box>
               </Box>
             </form>
           </Paper>
