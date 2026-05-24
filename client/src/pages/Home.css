@@ -49,10 +49,7 @@ html{
   background: rgba(253, 250, 245, 0.98);
 }
 
-#wander-dest-section,
-#wander-features {
-  scroll-margin-top: 100px;
-}
+
 #wander-dest-section,
 #wander-features {
   scroll-margin-top: 100px;
