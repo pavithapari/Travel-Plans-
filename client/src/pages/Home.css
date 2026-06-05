@@ -346,12 +346,12 @@ html {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr auto;
   overflow: hidden;
-  border: 0.5px solid rgba(26, 74, 107, 0.1);
+  border: 1.5px solid rgba(26, 74, 107, 0.4);
 }
 
 .wander-sf {
   padding: 1.4rem 1.5rem;
-  border-right: 0.5px solid rgba(26, 74, 107, 0.08);
+  border-right: 1px solid rgba(26, 74, 107, 0.3);
 }
 
 .wander-recent-searches {
@@ -390,6 +390,7 @@ html {
   letter-spacing: 0.8px;
   text-transform: uppercase;
   margin-bottom: 0.3rem;
+  text-align: left;
 }
 
 .wander-sf-val {
@@ -960,7 +961,7 @@ html {
 
   .wander-sf {
     border-right: none;
-    border-bottom: 0.5px solid rgba(26, 74, 107, 0.08);
+    border-bottom: 1px solid rgba(26, 74, 107, 0.3);
   }
 
   .wander-section {
@@ -1078,7 +1079,7 @@ html {
   justify-content: center !important;
   padding: 1rem 1.75rem !important;
   height: 84px !important;
-  border-right: 1px solid rgba(26, 74, 107, 0.12) !important;
+  border-right: 1px solid rgba(26, 74, 107, 0.35) !important;
   border-bottom: none !important;
 }
 
